@@ -1,0 +1,8 @@
+{
+  "name": "introfit-workspace",
+  "version": "0.1.0",
+  "description": "Type-safe router and requester.",
+  "repository": "git@github.com:introfit/introfit.git",
+  "author": "YiJie <yijie4188@gmail.com>",
+  "license": "MIT"
+}
