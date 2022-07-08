@@ -4,3 +4,6 @@
 
 # Lock Files
 *lock*
+
+# Lib
+node_modules

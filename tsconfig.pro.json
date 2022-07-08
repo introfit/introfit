@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "paths": {
+      "@introfit/*": [ "packages/*/dist" ]
+    }
+  }
+}
