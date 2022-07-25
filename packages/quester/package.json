@@ -1,0 +1,8 @@
+{
+  "name": "@introfit/quester",
+  "version": "0.1.0",
+  "description": "Introfit quester.",
+  "main": "dist/index.js",
+  "author": "YiJie <yijie4188@gmail.com>",
+  "license": "MIT"
+}
