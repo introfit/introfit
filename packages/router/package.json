@@ -1,0 +1,14 @@
+{
+  "name": "@introfit/router",
+  "version": "0.1.0",
+  "description": "Introfit router.",
+  "main": "dist/index.js",
+  "author": "YiJie <yijie4188@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "schemastery": "2.1.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4"
+  }
+}
