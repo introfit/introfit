@@ -167,9 +167,9 @@ export namespace Router {
               pathRegexp: regExp,
               middlewares: [middleware]
             })
-            target.docs = Object.assign(target.docs, {
+            target.docs = Object.assign(target.docs as {}, {
               [url]: { [method]: { inn, out } }
-            })
+            } as typeof target.docs)
             return proxy
           })
         }
