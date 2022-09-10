@@ -4,5 +4,8 @@
   "description": "Introfit quester.",
   "main": "dist/index.js",
   "author": "YiJie <yijie4188@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
 }
