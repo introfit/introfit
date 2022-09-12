@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { Adapter } from './adapter'
 
 export class AxiosAdapter implements Adapter<AxiosRequestConfig> {
@@ -8,7 +8,11 @@ export class AxiosAdapter implements Adapter<AxiosRequestConfig> {
     this.config = config
     this.#inner = axios.create(config)
   }
-  request(arg: string | any): Adapter.Response {
+  request<
+    T = any,
+    R extends AxiosResponse<T> = AxiosResponse<T>,
+    D = any,
+    >(arg: string | AxiosRequestConfig<D>): Promise<R> {
     if (typeof arg === 'string')
       return this.#inner.get(arg)
     else

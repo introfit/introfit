@@ -35,7 +35,7 @@ export namespace Adapter {
     baseURL?: string
   }
 
-  export interface RequestHeaders {}
+  export type RequestHeaders = Record<string, string>
 
   export interface RequestConfig<D = any> {
     /**
@@ -65,6 +65,7 @@ export namespace Adapter {
     status: number
     statusText: string
     config: RequestConfig<D>
+    headers: RequestHeaders
     request?: any
   }
 
