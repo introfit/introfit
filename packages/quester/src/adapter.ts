@@ -12,7 +12,7 @@ export interface Adapter<C extends Adapter.Config> {
      * default request should is a GET request
      * @param url
      */
-    & (<T = any, R extends Adapter.Response<T> = Adapter.Response<T>, D = any>(url: string) => Promise<R>)
+    & (<T = any, R extends Adapter.Response<T> = Adapter.Response<T>, D = any>(url: string, config?: Omit<Adapter.RequestConfig<D>, 'url'>) => Promise<R>)
     /**
      * complex request
      * @param config

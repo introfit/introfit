@@ -12,9 +12,12 @@ export class AxiosAdapter implements Adapter<AxiosRequestConfig> {
     T = any,
     R extends AxiosResponse<T> = AxiosResponse<T>,
     D = any,
-    >(arg: string | AxiosRequestConfig<D>): Promise<R> {
+    >(
+    arg: string | AxiosRequestConfig<D>,
+    config?: Omit<AxiosRequestConfig<D>, 'url'>,
+  ): Promise<R> {
     if (typeof arg === 'string')
-      return this.#inner.get(arg)
+      return this.#inner.get(arg, config)
     else
       return this.#inner.request(arg)
   }
